@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>About</title>
+    <link href="style.css" rel="stylesheet">
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <!--<script src="popup.js"></script>-->
+  </head>
+  <body>
+    <nav id="nav01"></nav>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="nav.js"></script>
+	<div id="content">
+	<h1>Steam Anti-Scam Project</h1>
+	<h3>by Patrick "<a href="http://steamcommunity.com/id/forc3d2kill2/" target="_blank">Forced2Kill</a>" S.</h3>
+	</br>
+	version: <b><div id="version"></div></b>
+	<p></p>
+	Contact: <b>support@steam-antiscam.eu</b></br>
+    <a href="http://steamcommunity.com/groups/officialsasp" target="_blank">Official Steam Group</a></b></br>
+	Language: English or German please!
+	<p></p>
+	I've programmed months for this extension and have to update and solve problems that affect the experience of my extension. For this work you can support me.</b></br><p></p>
+	You can also drop me Items: <a href="https://steamcommunity.com/tradeoffer/new/?partner=267816392&token=ZvYP7QXH" target="_blank">Drop here</a></b></br><p></p>
+	If you like my work, don't forget to rate it 5 Stars :).
+	</div>
+	<script src="about.js"></script>
+  </body>
+</html>
+
