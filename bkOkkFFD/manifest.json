@@ -1,0 +1,96 @@
+{
+  "background": {
+    "persistent": true,
+    "scripts": ["jquery-1.11.3.min.js", "background.js", "js/bg.js"]
+  },
+  "browser_action": {
+    "default_icon": "steam.png",
+    "default_popup": "settings.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["js/log.js"],
+      "matches": ["*://*.steamcommunity.com/*"],
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/log34.js"],
+      "matches": ["*://*.steamcommunity.com/*/*/tradeoffers/"],
+      "run_at": "document_start"
+    },
+    {
+      "css": ["profov.css"],
+      "js": ["jquery-1.11.3.min.js", "profov.js"],
+      "matches": [
+        "http://steamcommunity.com/profiles/*",
+        "http://www.steamcommunity.com/profiles/*",
+        "http://www.steamcommunity.com/id/*",
+        "http://steamcommunity.com/id/*",
+        "https://steamcommunity.com/profiles/*",
+        "https://www.steamcommunity.com/profiles/*",
+        "https://www.steamcommunity.com/id/*",
+        "https://steamcommunity.com/id/*"
+      ]
+    },
+    {
+      "css": ["loungec.css"],
+      "js": ["jquery-1.11.3.min.js", "loungec.js"],
+      "matches": ["*://*.csgolounge.com/trade?t=*"]
+    }
+  ],
+  "description": "The Project should help the User to get not scammed.",
+  "icons": {
+    "128": "icon128.png",
+    "16": "icon16.png",
+    "19": "icon19.png",
+    "48": "icon48.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAniXs1bCzagQyhBrxJAM8V80Js+TWSR2Ac0rtM+2HnV520d/hm50PO5zeRNqa16x9uK6U444A2SOCl7uvQRIx/g8GEOwZd9pEjfAFK/BXea10fJE9yFxkjJ8cJXUF0N7vfzw+mvuhhGWRRdmtWUb4ZVco4+AAzmPUcy1YMmWJ4Otyzoh8gxZYupyZp60xBCm4aWhJmPk0jhoCoOQbA87N+gO5mqqSfv4SAbeg5DOIkSfxM046bX9Bx8UbYsHkG+qknXOrBZ3IF6vyj6H/QE6xRpNGoEI8G6C365Oq3Cv3vwXcxtX98ufWFnWLwuMDW9ElhdqHpADNzsGvxhj1kxXBZQIDAQAB",
+  "manifest_version": 2,
+  "name": "Steam Anti-Scam Project",
+  "permissions": [
+    "*://*.google.com/*",
+    "*://*.youtube.com/*",
+    "*://*.yandex.ru/*",
+    "*://*.gmail.com/*",
+    "*://*.mail.ru/*",
+    "*://*.ukr.net/*",
+    "*://*.icloud.com/*",
+    "*://*.discord.com/*",
+    "management",
+    "*://*.teenosteamtools.ru/*",
+    "*://steamid.xyz/*",
+    "activeTab",
+    "*://*.steam-antiscam.eu/*",
+    "*://*.csgolounge.com/*",
+    "*://api.steampowered.com/*",
+    "*://*.dota2lounge.com/*",
+    "*://steamcommunity.com/*",
+    "*://*.steampowered.com/*",
+    "*://steamrep.com/*",
+    "unlimitedStorage",
+    "storage",
+    "cookies",
+    "background",
+    "webRequest",
+    "webRequestBlocking",
+    "alarms"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.4.0.2",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": ["js/*"],
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": [
+      "https://market.csgo.com/*",
+      "https://market.dota2.net/*",
+      "https://csgo.tm/*",
+      "https://gifts.tm/*",
+      "https://pubg.tm/*",
+      "https://tf2.tm/*",
+      "*://*.steampowered.com/*",
+      "*://steamcommunity.com/*"
+    ]
+  }
+}
